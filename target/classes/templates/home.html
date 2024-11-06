@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women Safety - Government Approved</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Open+Sans:wght@300;400;600&family=Pacifico&display=swap" rel="stylesheet">
+    <!-- <script src="https://smtpjs.com/v3/smtp.js"></script> -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB_BqUASfGmUCmC6Ai1jn2-SxtCSn4mW1M"></script>
+
+    <link rel="stylesheet" href="./style122.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <img src="./women.cms" alt="Safety Logo" class="logo">
+            <h1>Safe Her</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#contacts">Emergency Contacts</a></li>
+                    <li><a href="#tips">Safety Tips</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="/logout" id="logout">Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="animated-section">
+        <h2>Welcome to the Women Safety Website</h2>
+        <p>Your safety is our priority. Use the tools below to stay safe.</p>
+        <img src="./Safety-of-Women-in-India.jpg" alt="Women Safety" class="image">
+    </section>
+
+    <section id="features" class="animated-section">
+        <h2>Features</h2>
+        <div class="features-grid">
+            <div class="feature animated">
+                <i class="fas fa-bell"></i>
+                <h3>SOS</h3>
+                <button onclick="sendSOS()">Send SOS</button>
+            </div>
+
+            <div class="feature animated">
+                <i class="fas fa-map-marker-alt"></i>
+                <h3>Live Location</h3>
+                <button onclick="startLiveLocation()">Start Live Location Sharing</button>
+                <p id="live-location"></p>
+                <div id="map" style="height: 400px; width: 100%;"></div> <!-- Added map container -->
+            </div>
+
+            <div class="feature animated">
+                <i class="fas fa-microphone"></i>
+                <h3>Audio Recording</h3>
+                <button onclick="startAudioRecording()">Start Recording</button>
+                <button onclick="stopAudioRecording()">Stop Recording</button>
+                <audio id="audioPlayback" controls></audio>
+            </div>
+
+            <div class="feature animated">
+                <i class="fas fa-video"></i>
+                <h3>Video Recording</h3>
+                <video id="videoPlayback" width="320" height="240" controls></video><br>
+                <button onclick="startVideoRecording()">Start Recording</button>
+                <button onclick="stopVideoRecording()">Stop Recording</button>
+            </div>
+
+            <div class="feature animated">
+                <i class="fas fa-microphone-alt"></i>
+                <h3>Voice Command Activation</h3>
+                <p>Say "Help" to activate panic mode.</p>
+            </div>
+
+            <div class="feature animated">
+                <i class="fas fa-exclamation-triangle"></i>
+                <h3>Panic Mode</h3>
+                <button onclick="activatePanicMode()">Activate Panic Mode</button>
+            </div>
+
+            <div class="feature animated">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Unusual Behavior Detection</h3>
+                <p>System will monitor and alert for unusual behavior.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacts" class="animated-section">
+        <h2>Emergency Contacts</h2>
+        <ul class="contact-list">
+            <li>Police: 100</li>
+            <li>Women Helpline: 1091</li>
+            <li>Domestic Violence Helpline: 181</li>
+            <li>Ambulance: 102</li>
+            <li>Fire: 101</li>
+        </ul>
+    </section>
+
+    <section id="tips" class="animated-section">
+        <h2>Safety Tips</h2>
+        <ul class="tips-list">
+            <li>Avoid walking alone in isolated areas, especially at night.</li>
+            <li>Always inform someone you trust about your whereabouts.</li>
+            <li>Keep your phone charged and accessible at all times.</li>
+            <li>Trust your instincts—if something feels wrong, it probably is.</li>
+            <li>Learn basic self-defense techniques.</li>
+        </ul>
+    </section>
+
+    <!-- App Download Section -->
+    <section id="app-download" class="animated-section">
+        <h2>Download Our App</h2>
+        <p>Stay safe with our app. Click the button below to download.</p>
+        <a href="https://drive.google.com/file/d/1Ih1T5Fu-wpz47-_hKL-6mOetzGHsyb7-/view?usp=sharing" target="_blank">
+            <button class="download-btn">Download App</button>
+        </a>
+    </section>
+
+    <section id="contact" class="animated-section">
+        <h2>Contact Us</h2>
+        <form action="https://formspree.io/f/mdknjnaz" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+    
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+    
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+    
+            <button type="submit">Send Message</button>
+        </form>
+        <div id="contactSuccess" style="display: none;">
+            <p>Your message has been sent successfully!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Women Safety Initiative. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Use</a></p>
+    </footer>
+
+    <script src="./script122.js"></script>
+</body>
+
+</html>
